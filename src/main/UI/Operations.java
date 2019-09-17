@@ -1,5 +1,8 @@
 package UI;
+// will work on figuring out how to take in a MIDI, MP3, and WAV file to extract the
+// info that I need later on
 
+/*
 import java.util.ArrayList;
 
 public class Operations {
@@ -35,3 +38,4 @@ public class Operations {
         return tempo;
     }
 }
+*/
