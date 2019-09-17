@@ -1,4 +1,4 @@
-package UI;
+package ui;
 // I used a lot of the code from the Basics 4 lecture lab (the SimpleCalculatorStarter)
 
 import java.util.Scanner;
@@ -11,6 +11,7 @@ public class Options {
         processOperations();
     }
 
+    @SuppressWarnings("checkstyle:RightCurly")
     private void processOperations() {
         do {
             System.out.println("Choose which type of file to convert (MIDI, MP3, or WAV):");
@@ -24,8 +25,7 @@ public class Options {
             if (operation.contains("more info")) {
                 break;  // I do not know how to return to a certain point in a loop yet
             }
-        }
-        while (true);
+        } while (true);
     }
 
     public static void main(String[] args) {
