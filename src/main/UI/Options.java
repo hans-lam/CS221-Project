@@ -16,7 +16,7 @@ public class Options {
             System.out.println("Choose which type of file to convert (MIDI, MP3, or WAV):");
             String operation = scanner.nextLine();
             System.out.println("You chose: " + operation);
-            System.out.println("Next, choose the info you would like to know about the music (key, notes, rhythm, and/or tempo):");
+            System.out.println("Next, choose what you want to know (key, notes, rhythm, and/or tempo):");
             operation = scanner.nextLine();
             System.out.println("The " + operation + " of the piece is ");
             System.out.println("Would you like to know more info or look at a different piece of music?");
@@ -24,7 +24,8 @@ public class Options {
             if (operation.contains("more info")) {
                 break;  // I do not know how to return to a certain point in a loop yet
             }
-        } while (true);
+        }
+        while (true);
     }
 
     public static void main(String[] args) {
