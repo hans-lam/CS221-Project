@@ -1,4 +1,4 @@
-package ModelTests.TestClasses;
+package modelTests.testClasses;
 
 import model.classes.CharacterClass;
 import model.classes.Classes;
@@ -10,30 +10,30 @@ import static model.classes.Monk.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestMonkClass {
-    private Classes TestMonk;
+    private Classes testMonk;
     @BeforeEach
     void runBefore() {
-        TestMonk = new Monk();
+        testMonk = new Monk();
     }
 
     @Test
     void testGetLevelOneTraits() {
         assertEquals("Monk traits: " + "\n" + UnarmoredDefense + "\n" + MartialArts,
-                TestMonk.getLevelOneTraits());
+                testMonk.getLevelOneTraits());
     }
 
     @Test
     void testGetLevelTwoTraits() {
         assertEquals("" + "\n" + UnarmoredMovement + "\n" + Ki,
-                TestMonk.getLevelTwoTraits());
+                testMonk.getLevelTwoTraits());
     }
 
     @Test
     void testGetInfo() {
-        CharacterClass TestMonk2;
-        TestMonk2 = new Monk();
+        CharacterClass testMonk2;
+        testMonk2 = new Monk();
 
-        TestMonk.getLevelOneTraits();
-        assertEquals(TestMonk.getLevelTwoTraits(), TestMonk2.getClassInfo());
+        testMonk.getLevelOneTraits();
+        assertEquals(testMonk.getLevelTwoTraits(), testMonk2.getClassInfo());
     }
 }

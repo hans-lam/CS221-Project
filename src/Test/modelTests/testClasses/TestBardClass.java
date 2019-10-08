@@ -1,4 +1,4 @@
-package ModelTests.TestClasses;
+package modelTests.testClasses;
 
 import model.classes.Bard;
 import model.classes.CharacterClass;
@@ -10,32 +10,32 @@ import static model.classes.Bard.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestBardClass {
-    private Classes TestBard;
+    private Classes testBard;
 
     @BeforeEach
     void runBefore() {
-        TestBard = new Bard();
+        testBard = new Bard();
     }
 
     @Test
     void testGetLevelOneTraits() {
         assertEquals("Bard traits: " + "\n" + BardicInspiration + "\n" + Spellcasting,
-                TestBard.getLevelOneTraits());
+                testBard.getLevelOneTraits());
     }
 
     @Test
     void testGetLevelTwoTraits() {
         assertEquals("" + "\n" + JackOfAllTrades + "\n" + SongOfRest,
-                TestBard.getLevelTwoTraits());
+                testBard.getLevelTwoTraits());
     }
 
     @Test
     void testGetInfo() {
-        CharacterClass TestBard2;
-        TestBard2 = new Bard();
+        CharacterClass testBard2;
+        testBard2 = new Bard();
 
-        TestBard.getLevelOneTraits();
-        assertEquals(TestBard.getLevelTwoTraits(), TestBard2.getClassInfo());
+        testBard.getLevelOneTraits();
+        assertEquals(testBard.getLevelTwoTraits(), testBard2.getClassInfo());
     }
 }
 
