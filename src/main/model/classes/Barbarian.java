@@ -1,6 +1,6 @@
-package model.Class;
+package model.classes;
 
-public class Warlock implements Classes {
+public class Barbarian implements Classes {
     @Override
     public String getLevelOneTraits() {
 

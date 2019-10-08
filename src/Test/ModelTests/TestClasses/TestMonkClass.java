@@ -1,12 +1,12 @@
 package ModelTests.TestClasses;
 
-import model.Class.CharacterClass;
-import model.Class.Classes;
-import model.Class.Monk;
+import model.classes.CharacterClass;
+import model.classes.Classes;
+import model.classes.Monk;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static model.Class.Monk.*;
+import static model.classes.Monk.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestMonkClass {

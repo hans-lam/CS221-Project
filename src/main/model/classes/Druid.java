@@ -1,6 +1,6 @@
-package model.Class;
+package model.classes;
 
-public class Sorcerer implements Classes {
+public class Druid implements Classes {
     @Override
     public String getLevelOneTraits() {
 

@@ -1,12 +1,12 @@
 package ModelTests.TestClasses;
 
-import model.Class.Bard;
-import model.Class.CharacterClass;
-import model.Class.Classes;
+import model.classes.Bard;
+import model.classes.CharacterClass;
+import model.classes.Classes;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static model.Class.Bard.*;
+import static model.classes.Bard.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestBardClass {

@@ -1,6 +1,6 @@
-package model.Class;
+package model.classes;
 
-public class Wizard implements Classes {
+public class Rogue implements Classes {
     @Override
     public String getLevelOneTraits() {
 

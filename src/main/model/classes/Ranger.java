@@ -1,4 +1,4 @@
-package model.Class;
+package model.classes;
 
 public class Ranger implements Classes {
     @Override

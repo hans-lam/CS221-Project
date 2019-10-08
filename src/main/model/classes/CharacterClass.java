@@ -1,4 +1,4 @@
-package model.Class;
+package model.classes;
 
 public interface CharacterClass {
     String getClassInfo();
