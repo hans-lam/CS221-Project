@@ -1,4 +1,5 @@
-package ui;
+package model;
 
 public interface Character {
+
 }
