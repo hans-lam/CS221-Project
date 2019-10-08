@@ -1,4 +1,4 @@
 package model;
 
-public abstract class Spells implements Character {
+public interface Spells {
 }
