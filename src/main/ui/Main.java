@@ -2,8 +2,6 @@ package ui;
 
 import model.Class.Bard;
 import model.Class.Monk;
-import model.Race.Goliath;
-import model.Race.Races;
 
 public class Main {
     public static void main(String[] args) {

@@ -5,12 +5,9 @@ import model.Race.Races;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 import static model.Race.Goblin.DarkVision;
 import static model.Race.Goblin.NimbleEscape;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TestGoblin {
     private String AbilityScores;

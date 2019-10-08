@@ -1,10 +1,5 @@
 package model.Race;
 
-import javafx.scene.AmbientLight;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public abstract class Races implements CharacterRace {
     private String AbilityScores;
     private String Size;

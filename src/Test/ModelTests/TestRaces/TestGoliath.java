@@ -1,18 +1,13 @@
 package ModelTests.TestRaces;
 
-import model.Race.Goblin;
 import model.Race.Goliath;
 import model.Race.Races;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
-import static model.Race.Goblin.DarkVision;
 import static model.Race.Goliath.NaturalAthlete;
 import static model.Race.Goliath.PowerfulBuild;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TestGoliath {
         private String AbilityScores;
