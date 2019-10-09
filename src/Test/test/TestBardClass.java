@@ -1,4 +1,4 @@
-package modelTests.testClasses;
+package test;
 
 import model.classes.Bard;
 import model.classes.CharacterClass;

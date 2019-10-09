@@ -1,4 +1,4 @@
-package modelTests.testRaces;
+package test;
 
 import model.race.Goliath;
 import model.race.Races;
