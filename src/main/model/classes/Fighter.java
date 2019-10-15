@@ -12,4 +12,9 @@ public class Fighter implements Classes {
 
         return null;
     }
+
+    @Override
+    public String print() {
+        return null;
+    }
 }

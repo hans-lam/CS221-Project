@@ -36,4 +36,10 @@ class TestMonkClass {
         testMonk.getLevelOneTraits();
         assertEquals(testMonk.getLevelTwoTraits(), testMonk2.getClassInfo());
     }
+
+    @Test
+    void testPrint() {
+        Classes testMonk2 = new Monk();
+        assertEquals(testMonk2, testMonk.print());
+    }
 }

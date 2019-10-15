@@ -7,10 +7,10 @@ public class Main {
     public static void main(String[] args) {
         Bard myBard = new Bard();
         myBard.getClassInfo();
-        myBard.printBard();
+        myBard.print();
 
         Monk myMonk = new Monk();
         myMonk.getClassInfo();
-        myMonk.printMonk();
+        myMonk.print();
     }
 }

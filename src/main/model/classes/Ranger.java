@@ -12,4 +12,9 @@ public class Ranger implements Classes {
 
         return null;
     }
+
+    @Override
+    public String print() {
+        return null;
+    }
 }

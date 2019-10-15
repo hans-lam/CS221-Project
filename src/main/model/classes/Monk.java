@@ -52,7 +52,8 @@ public class Monk implements Classes, CharacterClass {
         }
     }
 
-    public void printMonk() {
+    public String print() {
         System.out.println(monk);
+        return monk;
     }
 }

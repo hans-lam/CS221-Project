@@ -37,5 +37,15 @@ class TestBardClass {
         testBard.getLevelOneTraits();
         assertEquals(testBard.getLevelTwoTraits(), testBard2.getClassInfo());
     }
+
+    @Test
+    void testPrint() {
+        Classes testBard2 = new Bard();
+        assertEquals(testBard2, testBard.print());
+    }
+
+    @Test
+    void saveBard() {
+    }
 }
 

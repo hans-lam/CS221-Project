@@ -12,4 +12,9 @@ public class Warlock implements Classes {
 
         return null;
     }
+
+    @Override
+    public String print() {
+        return null;
+    }
 }

@@ -59,7 +59,8 @@ public class Bard implements Classes, CharacterClass {
         }
     }
 
-    public void printBard() {
+    public String print() {
         System.out.println(bard);
+        return bard;
     }
 }
