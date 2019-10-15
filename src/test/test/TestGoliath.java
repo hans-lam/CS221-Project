@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static model.race.Goliath.NaturalAthlete;
 import static model.race.Goliath.PowerfulBuild;
+import static model.race.Goliath.Language;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestGoliath {
@@ -19,7 +20,7 @@ class TestGoliath {
                 + "The goliath sense of fairness, balanced with an emphasis no self sufficiency and personal "
                 + "accountability, pushes them toward neutrality.";
         private String racialTraits = "";
-        private String languages = "You can speak, read, and write Common and Giant.";
+        private String languages = "";
         private Races Goliath;
 
         @BeforeEach
@@ -46,6 +47,11 @@ class TestGoliath {
         @Test
         void testGetSpeed() {
             assertEquals(speed, Goliath.getSpeed());
+        }
+
+        @Test
+        void testGetLanguages() {
+            assertEquals("You can speak, read, and write " + Language, Goliath.getLanguages(Language));
         }
     }
 

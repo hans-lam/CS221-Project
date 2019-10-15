@@ -4,6 +4,7 @@ public class Goliath extends Races {
     public static String PowerfulBuild = "You count as one size larger when determining your carrying capacity and "
             + "the weight you can push, drag, or lift.";
     public static String NaturalAthlete = "You have proficiency in the Athletics skill.";
+    public static String Language = "Common and Giant.";
 
     public Goliath(String abilityScores, String size, String speed, String age, String alignment,
                   String racialTraits, String languages) {
@@ -17,7 +18,7 @@ public class Goliath extends Races {
                 + " of fairness, balanced with an emphasis no self sufficiency and personal accountability, "
                 + "pushes them toward neutrality.";
         this.racialTraits = "";
-        this.languages = "You can speak, read, and write Common and Giant.";
+        this.languages = "";
     }
 
     @Override

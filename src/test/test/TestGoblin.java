@@ -5,8 +5,7 @@ import model.race.Races;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static model.race.Goblin.DarkVision;
-import static model.race.Goblin.NimbleEscape;
+import static model.race.Goblin.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestGoblin {
@@ -17,9 +16,7 @@ class TestGoblin {
             + "few goblins live to old age, the most cautious rarely live longer than 60 years.";
     private String alignment = "Most of the goblins of Ravnica are chaotic, with no inclination towards good or evil.";
     private String racialTraits = "";
-    private String languages = "You can speak, read, and write Common and Goblin. In Ravnica, Goblin is a simplistic "
-            + "language with a limited vocabulary and fluid rules of grammar, unsuited for any sophisticated "
-            + "conversation.";
+    private String languages = "";
     private Races Goblin;
 
     @BeforeEach
@@ -46,5 +43,10 @@ class TestGoblin {
     @Test
     void testGetSpeed() {
         assertEquals(speed, Goblin.getSpeed());
+    }
+
+    @Test
+    void testGetLanguages() {
+        assertEquals("You can speak, read, and write " + Language, Goblin.getLanguages(Language));
     }
 }

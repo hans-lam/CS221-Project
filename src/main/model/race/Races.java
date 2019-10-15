@@ -8,6 +8,7 @@ public abstract class Races implements CharacterRace {
     String alignment;
     String racialTraits;
     String languages;
+    private String languageStarter = "You can speak, read, and write ";
 
     Races(String abilityScores, String size, String speed, String age,
             String alignment, String racialTraits, String languages) {
@@ -36,4 +37,9 @@ public abstract class Races implements CharacterRace {
     }
 
     public abstract String getRacialTraits();
+
+    public String getLanguages(String s) {
+        this.languages = languageStarter + s;
+        return languages;
+    }
 }
