@@ -26,8 +26,13 @@ public class TestRangerClass {
     }
 
     @Test
+    void testGetInfo() {
+        assertEquals(null, testRanger.getClassInfo());
+    }
+
+    @Test
     void testRanger() {
         Classes testRanger2 = new Ranger();
-        assertEquals(testRanger2, testRanger.print());
+        assertEquals(null, testRanger.print());
     }
 }

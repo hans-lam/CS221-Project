@@ -27,8 +27,13 @@ public class TestFighterClass {
     }
 
     @Test
+    void testGetInfo() {
+        assertEquals(null, testFighter.getClassInfo());
+    }
+
+    @Test
     void testPrint() {
         Classes testFighter2 = new Fighter();
-        assertEquals(testFighter2, testFighter.print());
+        assertEquals(null, testFighter.print());
     }
 }

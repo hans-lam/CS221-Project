@@ -26,8 +26,13 @@ public class TestSorcererClass {
     }
 
     @Test
+    void testGetInfo() {
+        assertEquals(null, testSorcerer.getClassInfo());
+    }
+
+    @Test
     void testPrint() {
         Classes testSorcerer2 = new Sorcerer();
-        assertEquals(testSorcerer2, testSorcerer.print());
+        assertEquals(null, testSorcerer.print());
     }
 }

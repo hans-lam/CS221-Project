@@ -26,8 +26,13 @@ public class TestDruidClass {
     }
 
     @Test
+    void testGetInfo() {
+        assertEquals(null, testDruid.getClassInfo());
+    }
+
+    @Test
     void testDruid() {
         Classes testDruid2 = new Druid();
-        assertEquals(testDruid2, testDruid.print());
+        assertEquals(null, testDruid.print());
     }
 }

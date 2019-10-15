@@ -17,4 +17,10 @@ public class Barbarian implements Classes {
     public String print() {
         return null;
     }
+
+    @Override
+    public String getClassInfo() {
+
+        return null;
+    }
 }

@@ -26,8 +26,13 @@ public class BarbClassTest {
     }
 
     @Test
+    void testGetInfo() {
+        assertEquals(null, testBarbarian.getClassInfo());
+    }
+
+    @Test
     void testPrint() {
         Classes testBarbarian2 = new Barbarian();
-        assertEquals(testBarbarian2, testBarbarian.print());
+        assertEquals(null, testBarbarian.print());
     }
 }

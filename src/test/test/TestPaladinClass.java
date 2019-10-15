@@ -27,8 +27,13 @@ public class TestPaladinClass {
     }
 
     @Test
+    void testGetInfo() {
+        assertEquals(null, testPaladin.getClassInfo());
+    }
+
+    @Test
     void testPrint() {
         Classes testPaladin2 = new Paladin();
-        assertEquals(testPaladin2, testPaladin.print());
+        assertEquals(null, testPaladin.print());
     }
 }

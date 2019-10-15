@@ -26,8 +26,13 @@ public class TestWizardClass {
     }
 
     @Test
+    void testGetInfo() {
+        assertEquals(null, testWizard.getClassInfo());
+    }
+
+    @Test
     void testPrint() {
         Classes testWizard2 = new Wizard();
-        assertEquals(testWizard2, testWizard.print());
+        assertEquals(null, testWizard.print());
     }
 }

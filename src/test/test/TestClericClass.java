@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestClericClass {
+class TestClericClass {
     private Classes testCleric;
 
     @BeforeEach
@@ -26,8 +26,13 @@ public class TestClericClass {
     }
 
     @Test
+    void testGetInfo() {
+        assertEquals(null, testCleric.getClassInfo());
+    }
+
+    @Test
     void testPrint() {
         Classes testCleric2 = new Cleric();
-        assertEquals(testCleric2, testCleric.print());
+        assertEquals(null, testCleric.print());
     }
 }

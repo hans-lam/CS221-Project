@@ -3,8 +3,11 @@ package test;
 import model.classes.CharacterClass;
 import model.classes.Classes;
 import model.classes.Monk;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.*;
 
 import static model.classes.Monk.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -38,8 +41,49 @@ class TestMonkClass {
     }
 
     @Test
+    void saveMonk() throws IOException {
+        Monk testMonk2 = new Monk();
+        File monkFile = new File("Monk.txt");
+
+        monkFile.setWritable(false);
+        testMonk2.getClassInfo();
+        testMonk2.saveMonk();
+        String contents = testMonk.getClassInfo();
+        String path = "TestMonk.txt";
+        saveFile(contents, path);
+        File file = new File(path);
+        Assertions.assertTrue(file.length() > 0);
+        assertEquals(readFile(path), readFile("Monk.txt"));
+
+        monkFile.setWritable(true);
+        testMonk2.getClassInfo();
+        testMonk2.saveMonk();
+        String contents1 = testMonk.getClassInfo();
+        String path1 = "TestMonk.txt";
+        saveFile(contents1, path1);
+        File file1 = new File(path1);
+        Assertions.assertTrue(file1.length() > 0);
+        assertEquals(readFile(path1), readFile("Monk.txt"));
+    }
+
+    static void saveFile(String contents, String path) throws IOException {
+        File file = new File(path);
+        BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+        writer.write(contents);
+        writer.close();
+    }
+
+    static String readFile(String path) throws IOException {
+        File file = new File(path);
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        String line;
+        line = br.readLine();
+        return line;
+    }
+
+    @Test
     void testPrint() {
-        Classes testMonk2 = new Monk();
+        String testMonk2 = "";
         assertEquals(testMonk2, testMonk.print());
     }
 }

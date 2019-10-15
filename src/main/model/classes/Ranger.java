@@ -17,4 +17,9 @@ public class Ranger implements Classes {
     public String print() {
         return null;
     }
+
+    @Override
+    public String getClassInfo() {
+        return null;
+    }
 }

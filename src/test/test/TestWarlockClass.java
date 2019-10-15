@@ -27,8 +27,13 @@ public class TestWarlockClass {
     }
 
     @Test
+    void testGetInfo() {
+        assertEquals(null, testWarlock.getClassInfo());
+    }
+
+    @Test
     void testPrint() {
         Classes testWarlock2 = new Warlock();
-        assertEquals(testWarlock2, testWarlock.print());
+        assertEquals(null, testWarlock.print());
     }
 }
