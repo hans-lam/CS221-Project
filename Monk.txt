@@ -2,7 +2,3 @@ Monk traits:
 Unarmored Defense: 
  Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom Modifier.
 I'll finish this later
-Unarmored Movement: 
- Starting at 2nd level, your speed increases by 10 feet while you are not wearing armor or wielding a shield. This bonus increases when you reach certain monk levels, as shown in the Monk table. 
- At 9th level, you gain the ability to move along vertical surfaces and across liquids onyour turn without falling during the move.
-So much ai ya.
