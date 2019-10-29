@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 public class HashMap {
     public static void main(String[] args) {
-        Spell acidSplash = new Spell("Acid Splash", new ArrayList<CharacterSpells>());
-        CharacterSpells fireball = new CharacterSpells("Fireball", new ArrayList<Spell>());
-        CharacterSpells frostbolt = new CharacterSpells("Frostbolt", new ArrayList<Spell>());
-        java.util.HashMap<String, CharacterSpells> spellMap = new java.util.HashMap<String, CharacterSpells>();
+        Spell acidSplash = new Spell("Acid Splash", new ArrayList<>());
+        CharacterSpells fireball = new CharacterSpells("Fireball", new ArrayList<>());
+        CharacterSpells frostbolt = new CharacterSpells("Frostbolt", new ArrayList<>());
+        java.util.HashMap<String, CharacterSpells> spellMap = new java.util.HashMap<>();
         java.util.HashMap<String, Spell> spellCharacterMap = new java.util.HashMap<>();
 
         acidSplash.addCharacterSpell(fireball);
@@ -22,12 +22,12 @@ public class HashMap {
         System.out.println(spellMap.get("Fireball").getName());
 
         spellCharacterMap.put(fireball.getFirst(), acidSplash);
-        System.out.println(spellCharacterMap.get(fireball.getFirst()).getName());
         System.out.println(spellCharacterMap.get("Acid Splash").getName());
 
         acidSplash.removeCharacterSpell(fireball);
         acidSplash.addCharacterSpell(frostbolt);
         System.out.println(acidSplash.getFirst());
         System.out.println(fireball.getSize());
+        System.out.println(acidSplash.getSize());
     }
 }
