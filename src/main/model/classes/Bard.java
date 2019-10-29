@@ -59,6 +59,7 @@ public class Bard implements Classes, CharacterClass {
         }
     }
 
+    @Override
     public String print() {
         System.out.println(bard);
         return bard;
