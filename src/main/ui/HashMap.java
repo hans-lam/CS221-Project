@@ -1,17 +1,17 @@
 package ui;
 
 import model.spells.CharacterSpells;
-import model.spells.Spell;
+import model.spells.MySpell;
 
 import java.util.ArrayList;
 
 public class HashMap {
     public static void main(String[] args) {
-        Spell acidSplash = new Spell("Acid Splash", new ArrayList<>());
+        MySpell acidSplash = new MySpell("Acid Splash", new ArrayList<>());
         CharacterSpells fireball = new CharacterSpells("Fireball", new ArrayList<>());
         CharacterSpells frostbolt = new CharacterSpells("Frostbolt", new ArrayList<>());
         java.util.HashMap<String, CharacterSpells> spellMap = new java.util.HashMap<>();
-        java.util.HashMap<String, Spell> spellCharacterMap = new java.util.HashMap<>();
+        java.util.HashMap<String, MySpell> spellCharacterMap = new java.util.HashMap<>();
 
         acidSplash.addCharacterSpell(fireball);
         System.out.println(acidSplash.getFirst());

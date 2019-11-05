@@ -2,44 +2,44 @@ package model.spells;
 
 import java.util.ArrayList;
 
-
-public class CharacterSpells extends Spell {
+public class MySpell extends Spell {
     String name;
-    ArrayList<MySpell> mySpellCharacterList;
+    ArrayList<CharacterSpells> spellList;
 
-    public CharacterSpells(String name, ArrayList<MySpell> mySpellCharacterList) {
+    public MySpell(String name, ArrayList<CharacterSpells> spellList) {
         super(name);
-        this.mySpellCharacterList = new ArrayList<>();
+        this.spellList = new ArrayList<>();
     }
 
-    public void addSpell(MySpell mySpell) {
-        if (!this.mySpellCharacterList.contains(mySpell)) {
+    public void addCharacterSpell(CharacterSpells spell) {
+        if (!this.spellList.contains(spell)) {
             try {
-                mySpellCharacterList.add(mySpell);
-                mySpell.addCharacterSpell(this);
+                spellList.add(spell);
+                spell.addSpell(this);
             } catch (NullPointerException e) {
                 e.printStackTrace();
             }
         }
     }
 
-    public void removeSpell(MySpell mySpell) {
-        if (this.mySpellCharacterList.contains(mySpell)) {
+    public void removeCharacterSpell(CharacterSpells spell) {
+        if (this.spellList.contains(spell)) {
             try {
-                mySpellCharacterList.remove(mySpell);
-                mySpell.removeCharacterSpell(this);
+                spellList.remove(spell);
+                spell.removeSpell(this);
             } catch (NullPointerException e) {
                 e.printStackTrace();
             }
         }
-    }
-
-    public String getFirst() {
-        return mySpellCharacterList.get(0).getName();
     }
 
     public int getSize() {
-        return mySpellCharacterList.size();
+        return spellList.size();
+    }
+
+
+    public String getFirst() {
+        return spellList.get(0).getName();
     }
 
     @Override

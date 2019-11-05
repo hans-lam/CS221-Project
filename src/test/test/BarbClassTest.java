@@ -1,10 +1,12 @@
 package test;
 
 import model.classes.Barbarian;
+import model.classes.CharacterClass;
 import model.classes.Classes;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static model.classes.Barbarian.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BarbClassTest {
@@ -17,17 +19,23 @@ public class BarbClassTest {
 
     @Test
     void testGetLevelOneTraits() {
-        assertEquals(null, testBarbarian.getLevelOneTraits());
+        assertEquals("Barbarian traits: " + "\n" + Rage + "\n" + UnarmoredDefense,
+                testBarbarian.getLevelOneTraits());
     }
 
     @Test
     void testGetLevelTwoTraits() {
-        assertEquals(null, testBarbarian.getLevelTwoTraits());
+        assertEquals("" + "\n" + DangerSense + "\n" + RecklessAttack,
+                testBarbarian.getLevelTwoTraits());
     }
 
     @Test
     void testGetInfo() {
-        assertEquals(null, testBarbarian.getClassInfo());
+        CharacterClass testBarbarian2;
+        testBarbarian2 = new Barbarian();
+
+        testBarbarian.getLevelOneTraits();
+        assertEquals(testBarbarian.getLevelTwoTraits(), testBarbarian2.getClassInfo());
     }
 
     @Test

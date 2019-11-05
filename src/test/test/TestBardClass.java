@@ -9,8 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.*;
 
-
-import static model.classes.Bard.*;
+import static model.classes.BardDescriptions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestBardClass {
@@ -29,7 +28,7 @@ class TestBardClass {
 
     @Test
     void testGetLevelTwoTraits() {
-        assertEquals("" + "\n" + JackOfAllTrades + "\n" + SongOfRest,
+        assertEquals("Bard traits: " + "\n" + JackOfAllTrades + "\n" + SongOfRest,
                 testBard.getLevelTwoTraits());
     }
 
@@ -44,7 +43,7 @@ class TestBardClass {
 
     @Test
     void testPrint() {
-        String testBard2 = "";
+        String testBard2 = "Bard traits: ";
         assertEquals(testBard2, testBard.print());
     }
 
