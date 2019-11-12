@@ -1,6 +1,6 @@
 package model.race;
 
-public abstract class Races implements CharacterRace {
+public abstract class Races {
     String abilityScores;
     String size;
     String speed;
