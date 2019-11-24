@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Subject {
+    // this is the subject
     private List<RaceObserver> observers;
 
     public Subject() {

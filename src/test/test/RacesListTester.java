@@ -17,10 +17,16 @@ public class RacesListTester {
         racesList = new RacesList();
     }
 
+
     @Test
     void testAddRace() {
         r = new Goblin("s","s","s","s","s","s","s");
+        racesList.setTriggerTrue();
         racesList.addRace(r);
         assertEquals(r, racesList.getFirst());
+
+        racesList.setTriggerFalse();
+        racesList.addRace(r);
+        assertEquals(racesList.failMessage(), racesList.getFailMessage());
     }
 }

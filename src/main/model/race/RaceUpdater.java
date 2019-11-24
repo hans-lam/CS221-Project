@@ -3,6 +3,7 @@ package model.race;
 import ui.PrintWebsite;
 
 public class RaceUpdater implements RaceObserver {
+    // concrete Observer
     Integer counter;
 
     public RaceUpdater(Integer n) {
