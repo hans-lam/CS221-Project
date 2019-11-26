@@ -1,9 +1,6 @@
 package test;
 
-import model.race.RaceObserver;
-import model.race.RaceUpdater;
-import model.race.RacesList;
-import model.race.Subject;
+import model.race.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -28,5 +25,11 @@ public class TestSubject {
         testSubject.addObserver(o);
         testObservers.add(o);
         assertEquals(testObservers, testSubject.getObservers());
+    }
+
+    @Test
+    void testNotifyObserver() {
+        Races r = new Goblin("s","s","s","s","s","s","s");
+        o.update(r);
     }
 }

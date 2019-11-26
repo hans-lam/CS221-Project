@@ -13,7 +13,7 @@ public class PrintWebsite {
         BufferedReader br = null;
 
         try {
-            String theURL = "file:///C:/Users/Aticcus/Desktop/meme.html";
+            String theURL = "https://dnd.wizards.com/";
             URL url = new URL(theURL);
             br = new BufferedReader(new InputStreamReader(url.openStream()));
 

@@ -1,3 +1,5 @@
+package test;
+
 import model.spells.CharacterSpells;
 import model.spells.MySpell;
 import model.spells.Spell;
@@ -7,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class MySpellTest {
     private String testName;
@@ -43,5 +46,10 @@ public class MySpellTest {
         testMySpell.addCharacterSpell(testCharacterSpell);
         testMySpell.removeCharacterSpell(testCharacterSpell);
         assertEquals(0, testMySpell.getSize());
+    }
+
+    @Test
+    void testEquals() {
+        assertFalse(testMySpell.equals(null));
     }
 }

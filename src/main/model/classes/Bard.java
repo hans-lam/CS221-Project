@@ -4,26 +4,28 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Bard implements Classes, CharacterClass {
+import static model.classes.BardDescriptions.*;
+
+public class Bard implements Classes {
     private String bard;
 
     public Bard() {
         this.bard = "Bard traits: ";
     }
 
-    private void easyTraits(String bardTrait1, String bardTrait2) {
-        this.bard = bard + "\n" + bardTrait1 + "\n" + bardTrait2;
+    public void setTraits(String trait1, String trait2) {
+        this.bard = bard + "\n" + trait1 + "\n" + trait2;
     }
 
     @Override
     public String getLevelOneTraits() {
-        easyTraits(BardDescriptions.BardicInspiration, BardDescriptions.Spellcasting);
+        setTraits(BardicInspiration, Spellcasting);
         return bard;
     }
 
     @Override
     public String getLevelTwoTraits() {
-        easyTraits(BardDescriptions.JackOfAllTrades, BardDescriptions.SongOfRest);
+        setTraits(JackOfAllTrades, SongOfRest);
         return bard;
     }
 
@@ -34,7 +36,7 @@ public class Bard implements Classes, CharacterClass {
         return bard;
     }
 
-    public void saveBard() {
+    public void save() {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("Bard.txt"));
             writer.write(bard);

@@ -24,7 +24,11 @@ public class RacesListTester {
         racesList.setTriggerTrue();
         racesList.addRace(r);
         assertEquals(r, racesList.getFirst());
+    }
 
+    @Test
+    void testAddRaceFail() {
+        r = new Goblin("s","s","s","s","s","s","s");
         racesList.setTriggerFalse();
         racesList.addRace(r);
         assertEquals(racesList.failMessage(), racesList.getFailMessage());

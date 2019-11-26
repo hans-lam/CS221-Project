@@ -43,12 +43,6 @@ public class MySpell extends Spell {
     }
 
     @Override
-    public int hashCode() {
-        String spellName = name;
-        return spellName.hashCode();
-    }
-
-    @Override
     public boolean equals(Object obj) {
         if (obj == this) {
             return true;

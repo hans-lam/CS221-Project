@@ -8,4 +8,8 @@ public interface Classes {
     String print();
 
     String getClassInfo();
+
+    void save();
+
+    void setTraits(String trait1, String trait2);
 }

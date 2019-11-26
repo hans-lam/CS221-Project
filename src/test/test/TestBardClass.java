@@ -1,7 +1,6 @@
 package test;
 
 import model.classes.Bard;
-import model.classes.CharacterClass;
 import model.classes.Classes;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -34,7 +33,7 @@ class TestBardClass {
 
     @Test
     void testGetInfo() {
-        CharacterClass testBard2;
+        Classes testBard2;
         testBard2 = new Bard();
 
         testBard.getLevelOneTraits();
@@ -54,7 +53,7 @@ class TestBardClass {
 
         bardFile.setWritable(false);
         testBard2.getClassInfo();
-        testBard2.saveBard();
+        testBard2.save();
         String contents = testBard.getClassInfo();
         String path = "TestBard.txt";
         saveFile(contents, path);
@@ -64,7 +63,7 @@ class TestBardClass {
 
         bardFile.setWritable(true);
         testBard2.getClassInfo();
-        testBard2.saveBard();
+        testBard2.save();
         String contents1 = testBard.getClassInfo();
         String path1 = "TestBard.txt";
         saveFile(contents1, path1);

@@ -1,6 +1,5 @@
 package test;
 
-import model.classes.CharacterClass;
 import model.classes.Classes;
 import model.classes.Monk;
 import org.junit.jupiter.api.Assertions;
@@ -10,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import java.io.*;
 
 import static model.classes.Monk.*;
+import static model.classes.MonkDescriptions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestMonkClass {
@@ -27,13 +27,13 @@ class TestMonkClass {
 
     @Test
     void testGetLevelTwoTraits() {
-        assertEquals("" + "\n" + UnarmoredMovement + "\n" + Ki,
+        assertEquals("Monk traits: " + "\n" + UnarmoredMovement + "\n" + Ki,
                 testMonk.getLevelTwoTraits());
     }
 
     @Test
     void testGetInfo() {
-        CharacterClass testMonk2;
+        Classes testMonk2;
         testMonk2 = new Monk();
 
         testMonk.getLevelOneTraits();
@@ -47,7 +47,7 @@ class TestMonkClass {
 
         monkFile.setWritable(false);
         testMonk2.getClassInfo();
-        testMonk2.saveMonk();
+        testMonk2.save();
         String contents = testMonk.getClassInfo();
         String path = "TestMonk.txt";
         saveFile(contents, path);
@@ -57,7 +57,7 @@ class TestMonkClass {
 
         monkFile.setWritable(true);
         testMonk2.getClassInfo();
-        testMonk2.saveMonk();
+        testMonk2.save();
         String contents1 = testMonk.getClassInfo();
         String path1 = "TestMonk.txt";
         saveFile(contents1, path1);
@@ -83,7 +83,7 @@ class TestMonkClass {
 
     @Test
     void testPrint() {
-        String testMonk2 = "";
+        String testMonk2 = "Monk traits: ";
         assertEquals(testMonk2, testMonk.print());
     }
 }

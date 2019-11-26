@@ -1,6 +1,8 @@
 package ui;
 
+import model.classes.Barbarian;
 import model.classes.Bard;
+import model.classes.Cleric;
 import model.classes.Monk;
 
 import java.io.BufferedReader;
@@ -11,13 +13,21 @@ public class SaveAndLoadClasses {
     public static void main(String[] args) throws IOException {
         Bard myBard = new Bard();
         myBard.getClassInfo();
-        myBard.saveBard();
+        myBard.save();
 
         Monk myMonk = new Monk();
         myMonk.getClassInfo();
-        myMonk.saveMonk();
+        myMonk.save();
 
-        BufferedReader br = new BufferedReader(new FileReader("Monk.txt"));
+        Barbarian myBarbarian = new Barbarian();
+        myBarbarian.getClassInfo();
+        myBarbarian.save();
+
+        Cleric myCleric = new Cleric();
+        myCleric.getClassInfo();
+        myCleric.save();
+
+        BufferedReader br = new BufferedReader(new FileReader("Cleric.txt"));
         String line;
         while ((line = br.readLine()) != null) {
             System.out.println(line);
