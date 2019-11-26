@@ -3,7 +3,7 @@ package model.race;
 public class Goblin extends Races {
     public static String DarkVision = "You can see in dim light within 60 feet of you as if it were bright light, and "
             + "in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.";
-    public static String NimbleEscape = "You can take the Disengage or Hide action as a bonus action on each of your"
+    public static String NimbleEscape = "You can take the Disengage or Hide action as a bonus action on each of your "
             + "turns.";
     public static String Language = "Common and Goblin. In Ravnica, Goblin is a simplistic language with a limited "
             + "vocabulary and fluid rules of grammar, unsuited for any sophisticated conversation.";
