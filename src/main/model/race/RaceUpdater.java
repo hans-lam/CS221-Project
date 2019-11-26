@@ -8,6 +8,8 @@ public class RaceUpdater implements RaceObserver {
         this.counter = n;
     }
 
+    // MODIFIES: counter
+    // EFFECTS: updates the counter and prints out the number of the counter
     @Override
     public void update(Races r) {
         counter += 1;

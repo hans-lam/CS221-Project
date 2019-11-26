@@ -27,6 +27,7 @@ public class SaveAndLoadClasses {
         myCleric.getClassInfo();
         myCleric.save();
 
+        // this reads the chosen file
         BufferedReader br = new BufferedReader(new FileReader("Cleric.txt"));
         String line;
         while ((line = br.readLine()) != null) {

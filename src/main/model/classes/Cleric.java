@@ -25,6 +25,7 @@ public class Cleric implements Classes {
         return cleric;
     }
 
+    // EFFECTS: returns and prints out cleric
     @Override
     public String print() {
         System.out.println(cleric);
@@ -38,6 +39,8 @@ public class Cleric implements Classes {
         return cleric;
     }
 
+    // REQUIRES: cleric cannot be null
+    // EFFECTS: saves cleric to a file named Cleric.txt
     @Override
     public void save() {
         try {
@@ -49,6 +52,8 @@ public class Cleric implements Classes {
         }
     }
 
+    // MODIFIES: this
+    // EFFECTS: sets cleric to be equal to some traits
     @Override
     public void setTraits(String trait1, String trait2) {
         this.cleric = cleric + "\n" + trait1 + "\n" + trait2;

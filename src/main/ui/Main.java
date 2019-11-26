@@ -6,7 +6,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 
 public class Main extends JFrame implements ActionListener {
     private JFrame frame = new JFrame("Main Menu");
@@ -95,6 +94,7 @@ public class Main extends JFrame implements ActionListener {
         container.add(races);
     }
 
+    // EFFECTS: calls a certain method based on an action event
     @Override
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();

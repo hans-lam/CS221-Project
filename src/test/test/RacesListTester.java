@@ -8,12 +8,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RacesListTester {
-    RacesList racesList;
-    Races r;
+class RacesListTester {
+    private RacesList racesList;
+    private Races r;
 
     @BeforeEach
-    public void runBefore() {
+    void runBefore() {
         racesList = new RacesList();
     }
 
@@ -21,7 +21,7 @@ public class RacesListTester {
     @Test
     void testAddRace() {
         r = new Goblin("s","s","s","s","s","s","s");
-        racesList.setTriggerTrue();
+        racesList.setTriggerOn();
         racesList.addRace(r);
         assertEquals(r, racesList.getFirst());
     }
@@ -29,7 +29,6 @@ public class RacesListTester {
     @Test
     void testAddRaceFail() {
         r = new Goblin("s","s","s","s","s","s","s");
-        racesList.setTriggerFalse();
         racesList.addRace(r);
         assertEquals(racesList.failMessage(), racesList.getFailMessage());
     }

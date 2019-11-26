@@ -25,6 +25,7 @@ public class Barbarian implements Classes {
         return barbarian;
     }
 
+    // EFFECTS: prints and returns barbarian
     @Override
     public String print() {
         System.out.println(barbarian);
@@ -38,6 +39,8 @@ public class Barbarian implements Classes {
         return barbarian;
     }
 
+    // REQUIRES: barbarian cannot be null
+    // EFFECTS: saves barbarian into a file named Barbarian.txt
     @Override
     public void save() {
         try {
@@ -49,6 +52,8 @@ public class Barbarian implements Classes {
         }
     }
 
+    // MODIFIES: this
+    // EFFECTS: sets barbarian to be equal to some traits
     @Override
     public void setTraits(String trait1, String trait2) {
         this.barbarian = barbarian + "\n" + trait1 + "\n" + trait2;

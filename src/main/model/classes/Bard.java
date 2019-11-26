@@ -13,6 +13,8 @@ public class Bard implements Classes {
         this.bard = "Bard traits: ";
     }
 
+    // MODIFIES: this
+    // EFFECTS: sets bard to be equal to some traits
     public void setTraits(String trait1, String trait2) {
         this.bard = bard + "\n" + trait1 + "\n" + trait2;
     }
@@ -36,6 +38,9 @@ public class Bard implements Classes {
         return bard;
     }
 
+    @Override
+    // REQUIRES: bard cannot be null
+    // EFFECTS: saves bard into a file named Bard.txt
     public void save() {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("Bard.txt"));
@@ -46,6 +51,7 @@ public class Bard implements Classes {
         }
     }
 
+    // EFFECTS: returns and prints out bard
     @Override
     public String print() {
         System.out.println(bard);

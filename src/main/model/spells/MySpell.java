@@ -4,13 +4,15 @@ import java.util.ArrayList;
 
 public class MySpell extends Spell {
     String name;
-    ArrayList<CharacterSpells> spellList;
+    private ArrayList<CharacterSpells> spellList;
 
-    public MySpell(String name, ArrayList<CharacterSpells> spellList) {
+    public MySpell(String name) {
         super(name);
         this.spellList = new ArrayList<>();
     }
 
+    // MODIFIES: mySpellCharacterList, spellList (in MySpell class)
+    // EFFECTS: adds a character spell to mySpellCharacterList and adds this to spellList
     public void addCharacterSpell(CharacterSpells spell) {
         if (!this.spellList.contains(spell)) {
             try {
@@ -22,6 +24,9 @@ public class MySpell extends Spell {
         }
     }
 
+    // REQUIRES: mySpellCharacterList and spellList cannot be empty
+    // MODIFIES: mySpellCharacterList, spellList (in MySpell class)
+    // EFFECTS: removes a character spell from mySpellCharacterList and removes this from spellList
     public void removeCharacterSpell(CharacterSpells spell) {
         if (this.spellList.contains(spell)) {
             try {
@@ -42,6 +47,7 @@ public class MySpell extends Spell {
         return spellList.get(0).getName();
     }
 
+    // EFFECTS: returns whether or not an object equals this
     @Override
     public boolean equals(Object obj) {
         if (obj == this) {

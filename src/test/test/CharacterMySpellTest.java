@@ -2,6 +2,7 @@ package test;
 
 import model.spells.CharacterSpells;
 import model.spells.MySpell;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CharacterMySpellTest {
+class CharacterMySpellTest {
     private String testName;
     private ArrayList<MySpell> testMySpellCharacterList;
     private CharacterSpells testCharacterSpells;
@@ -18,7 +19,7 @@ public class CharacterMySpellTest {
     void runBefore() {
         this.testName = "Bob";
         this.testMySpellCharacterList = new ArrayList<>();
-        this.testCharacterSpells = new CharacterSpells(testName, testMySpellCharacterList);
+        this.testCharacterSpells = new CharacterSpells(testName);
     }
 
     @Test
@@ -33,14 +34,14 @@ public class CharacterMySpellTest {
 
     @Test
     void testAddSpell() {
-        MySpell testMySpell = new MySpell("ooga-booga", new ArrayList<>());
+        MySpell testMySpell = new MySpell("ooga-booga");
         testCharacterSpells.addSpell(testMySpell);
         assertEquals(testMySpell.getName(), testCharacterSpells.getFirst());
     }
 
     @Test
     void testRemoveSpell() {
-        MySpell testMySpell = new MySpell("ooga-booga", new ArrayList<>());
+        MySpell testMySpell = new MySpell("ooga-booga");
         testCharacterSpells.addSpell(testMySpell);
         testCharacterSpells.removeSpell(testMySpell);
         assertEquals(testMySpellCharacterList.size(), testCharacterSpells.getSize());
@@ -48,6 +49,6 @@ public class CharacterMySpellTest {
 
     @Test
     void testEquals() {
-        assertFalse(testCharacterSpells.equals(null));
+        Assertions.assertNotEquals(null, testCharacterSpells);
     }
 }

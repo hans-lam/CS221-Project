@@ -107,6 +107,7 @@ public class WebsitePrinter extends JFrame implements ActionListener {
         buttonEnter(box);
     }
 
+    // EFFECTS: calls a certain method based on an action event
     @Override
     public void actionPerformed(ActionEvent e) { 
         String command = e.getActionCommand();

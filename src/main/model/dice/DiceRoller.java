@@ -6,7 +6,6 @@ public class DiceRoller {
     private int storage = 0;
     private String errors = "";
 
-    // EFFECTS: creates a default 20-sided die
     public DiceRoller(int sides, int numberOfDice) {
         this.sides = sides;
         this.numberOfDice = numberOfDice;
@@ -42,6 +41,9 @@ public class DiceRoller {
         }
     }
 
+    // EFFECTS: rolls the dice the specified number of times
+    //          will catch DiceNumberException if the number of dice is not between 1 and 20
+    //          will catch DiceSidesException if the number of sides is not between 1 and 20
     public String diceRoll() {
         try {
             rollingDice();
