@@ -49,6 +49,6 @@ class MySpellTest {
 
     @Test
     void testEquals() {
-        Assertions.assertNotEquals(null, testMySpell);
+        assertFalse(testMySpell.equals(null));
     }
 }

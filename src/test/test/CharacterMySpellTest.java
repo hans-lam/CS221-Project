@@ -49,6 +49,6 @@ class CharacterMySpellTest {
 
     @Test
     void testEquals() {
-        Assertions.assertNotEquals(null, testCharacterSpells);
+        assertFalse(testCharacterSpells.equals(null));
     }
 }
