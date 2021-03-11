@@ -1,2 +1,2 @@
 # CS221-Project
-A Dungeons and Dragons web app made using Java's Swing GUI through Intellij.
+A Dungeons and Dragons Java app, UI implemented using Java's Swing GUI library.
